@@ -1,3 +1,7 @@
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 # Checking Domains and Email Addresses</span>
 
 Breach Report API enables the user to check email addresses for data breach incidents:
@@ -7,7 +11,10 @@ Breach Report API enables the user to check email addresses for data breach inci
 * [Domains for compromised email addresses the domain](#check-a-web-domain)
 
 
-
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 # Check a Plaintext Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/check`
@@ -170,7 +177,10 @@ puts response.read_body
 </details>
 
 
-
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 # Check a Hashed Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email-hash/check`
@@ -336,7 +346,10 @@ puts response.read_body
 | breaches | null / [] | Detailed incident information. If `isAssigned = false`, then `breaches` will be null. |
 </details>
 
-
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 # Check a Web Domain
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/domain/check`
