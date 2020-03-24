@@ -56,6 +56,16 @@ The following parameters can be specified via the test environment.
 <details>
 <summary>How do I dropdown?</summary>
 <br>
-This is how you dropdown.
+This is how you dropdown. 
+
+```python
+usage = """Usage: python shortener.py [url]
+e.g python shortener.py http://www.google.com"""
+if len(sys.argv) != 2:
+    print usage
+    sys.exit(0)
+longurl = sys.argv[1]
+response = b.shorten(longUrl=longurl)
+```
 </details>
 
