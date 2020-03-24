@@ -99,8 +99,6 @@ puts response.read_body
 | email | string | Email address to be checked. |
 
 
-### Response: Breaches for a verified email address
-
 ### Response Examples 
 
 <details>
@@ -277,7 +275,6 @@ puts response.read_body
 | api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
 | hash | string | Hashed email address you want to check. |
 
-> Breaches for a verified email address.
 
 ### Response examples
 
