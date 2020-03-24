@@ -235,8 +235,9 @@ print(response.text.encode('utf8'))
 </details>
 
 <details>
-<summary>Shell code example</summary>
+<summary>Ruby code example</summary>
 <br>
+
 ```ruby
 require "uri"
 require "net/http"
