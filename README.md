@@ -17,7 +17,7 @@ The SuperAPI team monitors the internet for information about data breaches. Cur
 
 ## Getting started
 
-Before using SuperAPI, make sure you've registered at [SuperAPI portal](https://superapi.com) so you can use [the unique API key](). 
+Before using SuperAPI, make sure you've registered at [SuperAPI portal](https://superapi.com) so you can use [the unique API key](https://github.com/vissaly/brapi/blob/master/docs/get-api-key.md). 
 
 When you use SuperAPI, make sure to include the API key to each request header. 
 
@@ -34,5 +34,5 @@ The following parameters can be specified via the test environment.
 | PARAMETER | VALUE | COMMENTS |
 | ------ | ------ | ------ |
 | BASE_URL | `https://superapi.com` |  |
-| API_KEY | `your-secret-key` | See [Generating the API key]() for details. |
+| API_KEY | `your-secret-key` | See [Generating the API key](https://github.com/vissaly/brapi/blob/master/docs/get-api-key.md) for details. |
 
