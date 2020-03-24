@@ -51,3 +51,11 @@ The following parameters can be specified via the test environment.
 
 ## License 
 
+## Dropdown Example
+
+<details>
+<summary>How do I dropdown?</summary>
+<br>
+This is how you dropdown.
+</details>
+
