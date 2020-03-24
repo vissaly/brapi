@@ -15,6 +15,13 @@
 
 The SuperAPI team monitors the internet for information about data breaches. Currently, our database contains information about over 12B compromised user accounts. Your applications can access this information via SuperAPI.
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/superapi.png" alt="">
+  <br>
+</p>
+
+
 ## Getting started
 
 Before using SuperAPI, make sure you've registered at [SuperAPI portal](https://superapi.com) so you can use [the unique API key](https://github.com/vissaly/brapi/blob/master/docs/get-api-key.md). 
@@ -35,4 +42,12 @@ The following parameters can be specified via the test environment.
 | ------ | ------ | ------ |
 | BASE_URL | `https://superapi.com` |  |
 | API_KEY | `your-secret-key` | See [Generating the API key](https://github.com/vissaly/brapi/blob/master/docs/get-api-key.md) for details. |
+
+## How to Use SuperAPI
+
+
+
+## Contact 
+
+## License 
 
