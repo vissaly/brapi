@@ -11,7 +11,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20good,%20solid%20app%20to%20keep%20your%20keys%20safe.&url=https://keychain.array.io/&via=ProjectArray&hashtags=cybersecurity,private,cryptography,blockchain,app) [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/arrayio/array-io-keychain#contributing-to-the-project)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/arrayio/array-io-keychain/blob/master/LICENSE.md) [![npm version](https://badge.fury.io/js/keychain.js.svg)](https://badge.fury.io/js/keychain.js) ]
 
-## Overview
+# Overview
 
 The SuperAPI team monitors the internet for information about data breaches. Currently, our database contains information about over 12B compromised user accounts. Your applications can access this information via SuperAPI.
 
@@ -26,7 +26,7 @@ The SuperAPI team monitors the internet for information about data breaches. Cur
 
 Before using SuperAPI, make sure you've registered at [SuperAPI portal](https://superapi.com) so you can use [the unique API key](https://github.com/vissaly/brapi/blob/master/docs/get-api-key.md). 
 
-When you use SuperAPI, make sure to include the API key to each request header. 
+When you use SuperAPI, include the API key to each request header. 
 
 ## Testing SuperAPI
 
@@ -44,6 +44,9 @@ The following parameters can be specified via the test environment.
 | API_KEY | `your-secret-key` | See [Generating the API key](https://github.com/vissaly/brapi/blob/master/docs/get-api-key.md) for details. |
 
 ## How to Use SuperAPI
+
+* [Check Email Addresses and Domains]()
+
 
 
 
