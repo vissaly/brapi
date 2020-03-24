@@ -1,13 +1,13 @@
-# Checking Domains and Email Addresses
+<span style="color: #154360># Checking Domains and Email Addresses</span>
 
-Breach Report API enables the user to:
+Breach Report API enables the user to check email addresses for data breach incidents:
 
-* Check email addresses (plaintext values) for data breach incidents
-* Check SHA256-hashed email addresses for data breaches 
-* Find compromised email addresses on a Web domain
+* [Plaintext email addresses] (#check-a-plaintext-email-address)
+* [Check SHA256-hashed email addresses ](#check-a-hashed-email-address)
+* [Domains for compromised email addresses the domain](#check-a-web-domain)
 
 
-## Check a Plaintext Email Address
+<span style="color: #154360>## Check a Plaintext Email Address</span>
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/check`
 
