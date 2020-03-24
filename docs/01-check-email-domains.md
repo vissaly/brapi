@@ -8,7 +8,7 @@ Breach Report API enables the user to check email addresses for data breach inci
 
 
 
-## Check a Plaintext Email Address
+# Check a Plaintext Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/check`
 
@@ -171,9 +171,7 @@ puts response.read_body
 
 
 
-
-
-## Check a Hashed Email Address
+# Check a Hashed Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email-hash/check`
 
@@ -339,8 +337,7 @@ puts response.read_body
 </details>
 
 
-&nbsp  
-## Check a Web Domain
+# Check a Web Domain
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/domain/check`
 
