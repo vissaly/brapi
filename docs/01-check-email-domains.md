@@ -64,6 +64,7 @@ print(response.text.encode('utf8'))
 <details>
 <summary>Ruby code example</summary>
 <br>
+
 ```ruby
 # Sample Ruby code 
 require "uri"
@@ -78,6 +79,7 @@ response = http.request(request)
 puts response.read_body
 ```
 
+</details>
 
 ### Request Parameters
 
