@@ -7,7 +7,7 @@ Breach Report API enables the user to check email addresses for data breach inci
 * [Domains for compromised email addresses the domain](#check-a-web-domain)
 
 
-<span style="color: #154360>## Check a Plaintext Email Address</span>
+## <span style="color: #154360>Check a Plaintext Email Address</span>
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/check`
 
