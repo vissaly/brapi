@@ -183,6 +183,7 @@ puts response.read_body
   <br>
   <img width="500" src="./img/chapter-separate.jpg" alt="">
 </p>
+
 # Check a Hashed Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email-hash/check`
