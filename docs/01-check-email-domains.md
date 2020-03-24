@@ -2,7 +2,7 @@
 
 Breach Report API enables the user to check email addresses for data breach incidents:
 
-* [Plaintext email addresses] (#check-a-plaintext-email-address)
+* [Plaintext email addresses](#check-a-plaintext-email-address)
 * [Check SHA256-hashed email addresses ](#check-a-hashed-email-address)
 * [Domains for compromised email addresses the domain](#check-a-web-domain)
 
