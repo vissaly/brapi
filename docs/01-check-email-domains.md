@@ -7,6 +7,7 @@ Breach Report API enables the user to check email addresses for data breach inci
 * [Domains for compromised email addresses the domain](#check-a-web-domain)
 
 
+
 ## Check a Plaintext Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/check`
@@ -167,6 +168,8 @@ puts response.read_body
 | breaches | null / [] | Detailed incident information. If the email address is not assigned, then `incidents` will be null. |
 
 </details>
+
+
 
 ## Check a Hashed Email Address
 
@@ -332,6 +335,8 @@ puts response.read_body
 | isAssigned | boolean | Email verified by a user: true/false. |
 | breaches | null / [] | Detailed incident information. If `isAssigned = false`, then `breaches` will be null. |
 </details>
+
+
 
 ## Check a Web Domain
 
