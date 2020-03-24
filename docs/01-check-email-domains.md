@@ -2,6 +2,7 @@
   <br>
   <img width="500" src="./img/chapter-separate.jpg" alt="">
 </p>
+
 # Checking Domains and Email Addresses</span>
 
 Breach Report API enables the user to check email addresses for data breach incidents:
@@ -15,6 +16,7 @@ Breach Report API enables the user to check email addresses for data breach inci
   <br>
   <img width="500" src="./img/chapter-separate.jpg" alt="">
 </p>
+
 # Check a Plaintext Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/check`
