@@ -1,4 +1,4 @@
-<span style="color: #154360># Checking Domains and Email Addresses</span>
+# Checking Domains and Email Addresses</span>
 
 Breach Report API enables the user to check email addresses for data breach incidents:
 
@@ -7,7 +7,7 @@ Breach Report API enables the user to check email addresses for data breach inci
 * [Domains for compromised email addresses the domain](#check-a-web-domain)
 
 
-## <span style="color: #154360>Check a Plaintext Email Address</span>
+## Check a Plaintext Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/check`
 
