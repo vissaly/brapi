@@ -5,11 +5,11 @@
 
 # Checking Domains and Email Addresses</span>
 
-Breach Report API enables the user to check email addresses for data breach incidents:
+SuperAPI enables the user to check email addresses for data breach incidents by providing the following calls:
 
-* [Plaintext email addresses](#check-a-plaintext-email-address)
-* [Check SHA256-hashed email addresses ](#check-a-hashed-email-address)
-* [Domains for compromised email addresses the domain](#check-a-web-domain)
+* [Check a plaintext email address](#check-a-plaintext-email-address)
+* [Check a hashed email address](#check-a-hashed-email-address)
+* [Check a web domain for compromised email addresses](#check-a-web-domain)
 
 
 <p align="center">
@@ -31,7 +31,7 @@ This API call accepts a plaintext email address and checks it for known data bre
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). The API key must be included in the request header. |
+| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
 | email | string | Email address to be checked. |
 
 </details>
@@ -199,7 +199,7 @@ This API call accepts a SHA256-hash email address value. This is the recommended
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
+| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
 | hash | string | Hashed email address you want to check. |
 
 </details>
@@ -370,7 +370,7 @@ This API call accepts a plaintext web domain value and returns a list of comprom
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). The API key must be included in the request header. |
+| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
 | domain | string | Web domain to be checked. |
 
 </details>
@@ -446,12 +446,12 @@ puts response.read_body
     "admin@example.com"
   ]
 }
- 
 ```
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| domains | [] | List / array of compromized email addresses. |
+| domains | [] | List / array of compromised email addresses. |
+
 </details>
 
 
