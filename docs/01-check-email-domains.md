@@ -225,7 +225,7 @@ Before sending a query, generate the email address hash.
 
 </details>
 
-Alternatively, you may use an online hashing tool. For example, the [SHA256 tool on github.io](https://emn178.github.io/online-tools/sha256.html).
+Alternatively, you may use an online hashing tool. For example, the [hash calculator on github.io](https://emn178.github.io/online-tools/sha256.html).
 
 ### Request Parameters
 
@@ -380,7 +380,7 @@ How to construct the request:
 ### Request Parameters
 
 <details>
-<summary>Show the request parameters.</summary>
+<summary>Show the parameters.</summary>
 <br>
 
 | Name | Type | Description |
