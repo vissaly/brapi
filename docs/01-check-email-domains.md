@@ -25,17 +25,6 @@ SuperAPI enables the user to check email addresses for data breach incidents by 
 
 This API call accepts a plaintext email address and checks it for known data breaches. 
 
-<details>
-<summary>Show the request parameters.</summary>
-<br>
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
-| email | string | Email address to be checked. |
-
-</details>
-
 Alternatively, you may check an email address by using a [hashed email address](#check-a-hashed-email-address) (recommended method).
 
 This API call returns:
@@ -49,6 +38,19 @@ How to construct the request:
 
 1. Include the API key in the request header.
 2. Specify the email in the request body.
+
+### Request parameters
+
+<details>
+<summary>Show the parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
+| email | string | Email address to be checked. |
+
+</details>
 
 ### Code Examples
 
@@ -193,17 +195,6 @@ puts response.read_body
 
 This API call accepts a SHA256-hash email address value. This is the recommended way to check email addresses using SuperAPI.
 
-<details>
-<summary>Show the request parameters.</summary>
-<br>
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
-| hash | string | Hashed email address you want to check. |
-
-</details>
-
 Alternatively, the API provides a request accepting [a plaintext email address value](#check-a-plaintext-email-address). 
 
 This API call returns:
@@ -224,13 +215,30 @@ SuperAPI only uses encrypted email address values. The encryption method is **Ar
 
 Before sending a query, generate the email address hash.
 
-How to produce an email address hash on Linux or Mac OS:
+<details>
+<summary>How to produce an email address hash on Linux or Mac OS.</summary>
+<br>
 
 1. Convert your email to lowercase letters.
 2. In the terminal, run the following command: `echo -n {email} | sha256sum`. Here, `{email}` is an email address you want to check. Don't use the brackets!
 3. The command will produce a unique 64-character-long alphanumeric value that will look like: `8b063d4d3f323127ad8c13example69a747da2421db686144c5c982cc491e1ad`.
 
+</details>
+
 Alternatively, you may use an online hashing tool. For example, the [SHA256 tool on github.io](https://emn178.github.io/online-tools/sha256.html).
+
+### Request Parameters
+
+<details>
+<summary>Show the parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
+| hash | string | Hashed email address you want to check. |
+
+</details>
 
 ### Code Examples
 
@@ -364,6 +372,13 @@ puts response.read_body
 
 This API call accepts a plaintext web domain value and returns a list of compromised email addresses on this domain. 
 
+How to construct the request:
+
+1. Include the API key in the request header.
+2. Specify the domain in the request body.
+
+### Request Parameters
+
 <details>
 <summary>Show the request parameters.</summary>
 <br>
@@ -374,11 +389,6 @@ This API call accepts a plaintext web domain value and returns a list of comprom
 | domain | string | Web domain to be checked. |
 
 </details>
-
-How to construct the request:
-
-1. Include the API key in the request header.
-2. Specify the domain in the request body.
 
 ### Code Examples
 
