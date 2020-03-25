@@ -483,6 +483,11 @@ puts response.read_body
 
 </details>
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 ## Get the Domain List
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/domain`
@@ -623,6 +628,11 @@ puts response.read_body
 
 </details>
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 ## Delete an Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/{EMAIL_ID}`
@@ -656,17 +666,17 @@ How to construct the request:
 <details>
 <summary>Shell command example.</summary>
 <br>
-</details>
 
 ```shell
 curl --location --request DELETE '{{BASE_URL}}/api/enterprise/v1/email/5e4d65741eb6bb316c90fef2' \
 --header 'api-key: {{API_KEY}}'
 ```
 
+</details>
+
 <details>
 <summary>JavaScript code example.</summary>
 <br>
-</details>
 
 ```javascript
 // Using fetch()
@@ -683,6 +693,8 @@ fetch("{{BASE_URL}}/api/enterprise/v1/email/5e4d65741eb6bb316c90fef2", requestOp
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 ```
+
+</details>
 
 <details>
 <summary>Python code example.</summary>
