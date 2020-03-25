@@ -55,7 +55,7 @@ How to construct the request:
 ### Code Examples
 
 <details>
-<summary>Shell code example</summary>
+<summary>Shell command example</summary>
 <br>
 
 ```shell
@@ -107,7 +107,7 @@ puts response.read_body
 ### Response Examples 
 
 <details>
-<summary>Example: Verified email address - found  breaches</summary>
+<summary>Verified email address: found  breaches</summary>
 <br>
 
 ```json
@@ -160,7 +160,7 @@ puts response.read_body
 
 
 <details>
-<summary>Unverified email address - No breaches</summary>
+<summary>Unverified email address: No breaches</summary>
 <br> 
 
 ```json
@@ -168,7 +168,7 @@ puts response.read_body
     "email": "test@example.com",
     "records": 34924,
     "isAssigned": false,
-    "breaches": []
+    "breaches": 0
 }
 ```
 
@@ -243,7 +243,7 @@ Alternatively, you may use an online hashing tool. For example, the [hash calcul
 ### Code Examples
 
 <details>
-<summary>Shell code example</summary>
+<summary>Shell command example</summary>
 <br>
 
 ```shell
@@ -255,7 +255,7 @@ curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/email-hash/check'
 </details>
 
 <details>
-<summary>Shell code example</summary>
+<summary>Python code example</summary>
 <br>
 
 ```python
@@ -393,7 +393,7 @@ How to construct the request:
 ### Code Examples
 
 <details>
-<summary>Shell Code Examples</summary>
+<summary>Shell command example</summary>
 <br>
 
 ```shell
@@ -405,7 +405,7 @@ curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/domain/check' \
 </details>
 
 <details>
-<summary>Verified Email Address - Found Breaches</summary>
+<summary>Python code example</summary>
 <br>
 
 ```python
@@ -424,7 +424,7 @@ print(response.text.encode('utf8'))
 
 
 <details>
-<summary>Verified Email Address - Found Breaches</summary>
+<summary>Ruby code example</summary>
 <br>
 
 ```ruby
