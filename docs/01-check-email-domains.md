@@ -191,7 +191,7 @@ puts response.read_body
 
 **Request method:** `POST`
 
-This API call accepts a SHA256-hash email address value. This is the recommended way to check email addresses using Breach Report API.
+This API call accepts a SHA256-hash email address value. This is the recommended way to check email addresses using SuperAPI.
 
 <details>
 <summary>Show the request parameters.</summary>
@@ -220,7 +220,7 @@ How to construct the request:
 
 ### About Email Address Hashing
 
-Breach Report API only uses encrypted email address values. The encryption method is **Argond2d(SHA256(<email>))**.
+SuperAPI only uses encrypted email address values. The encryption method is **Argond2d(SHA256(<email>))**.
 
 Before sending a query, generate the email address hash.
 
