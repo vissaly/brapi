@@ -347,9 +347,14 @@ puts response.read_body
 
 </details>
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 ## Get the Email List
 
-**Request URL**: `{BASE_URL}/api/enterprise/v1/email
+**Request URL**: `{BASE_URL}/api/enterprise/v1/email`
 
 **Request method:** `GET`
 
