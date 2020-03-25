@@ -1,10 +1,15 @@
+
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
+
 ### Request Parameters
 
 <details>
 <summary>Show the parameters.</summary>
 <br>
-
-
 </details>
 
 ### Sample Response Examples
