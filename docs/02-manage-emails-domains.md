@@ -1,17 +1,17 @@
 # Working with the Account
 
-Most Breach Report API calls are only applicable to the email addresses and web domains that have been registered with the consumer's account. 
+Most Breach Report API calls are only applicable to the email addresses and web domains that have been registered with the consumer's account.
 
-Using the API calls documented in this chapter, the consumer may:
+This chapter describes the following API calls:
 
-* Add an email address to the account
-* Add a web domain to the account
-* Get the list of registered email addresses
-* Get the list of registered web domains
-* Remove an email address from the account
-* Remove a web domain from the account
-* Check a registered email address for data breach incidents
-* Check a registered web domain for data breach incidents
+* [Add an email address to the account](#add-an-email-address)
+* [Add a web domain to the account](#add-a-domain-name)
+* [Get the list of registered email addresses](#get-the-email-list)
+* [Get the list of registered web domains](#get-the-domain-list)
+* [Remove an email address from the account](#delete-an-email-address)
+* [Remove a web domain from the account](#delete-a-domain)
+* [Check a registered email address for data breach incidents](#check-a-registered-email-address)
+* [Check a registered web domain for data breach incidents](#check-a-registered-domain)
 
 ## Add an Email Address
 
@@ -19,16 +19,33 @@ Using the API calls documented in this chapter, the consumer may:
 
 **Request method:** `POST`
 
-This API call accepts an email address and adds it to a Breach Report account. The BR account must be associated with the secret API key (needs to be included in the request header). 
+This API call accepts an email address and adds it to a Breach Report account. The BR account must be associated with the secret API key (needs to be included in the request header).
 
-The request returns a response code and a status message. 
+The request returns a response code and a status message.
 
 How to construct the request:
 
 1. Include the API key in the request header.
 2. Specify the email address in the request body.
 
+### Request parameters
+
+<details>
+<summary>Show the parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | The key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
+| email | string | Email address to be checked. |
+
+</details>
+
 ### Code Examples
+
+<details>
+<summary>Shell code example.</summary>
+<br>
 
 ```shell
 curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/email' \
@@ -37,56 +54,40 @@ curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/email' \
 --data-urlencode 'email=me@vassily.pro'
 ```
 
-```c
-// Sample C code
-```
+</details>
 
-```csharp
-// Sample C# code
-```
-
-
-```go
-// Sample Golang comments
-```
-
-```http
-<!-- Sample HTTP code --> 
-```
-
-
-```java
-// Sample Java code
-```
+<details>
+<summary>JavaScript code example.</summary>
+<br>
 
 ```javascript
-// Fetch
+// Using fetch()
+var myHeaders = new Headers();
+myHeaders.append("api-key", "{{API_KEY}}");
+myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+var urlencoded = new URLSearchParams();
+urlencoded.append("email", "test@test.com");
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: urlencoded,
+  redirect: 'follow'
+};
+
+fetch("{{BASE_URL}}/api/enterprise/v1/email", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 ```
 
-```javascript
-// NodeJS
-```
+</details>
 
-```php
-// Sample PHP code
-```
+<details>
+<summary>Python code example.</summary>
+<br>
 
 ```python
-# Sample Python code - http.client
-import http.client
-import mimetypes
-conn = http.client.HTTPSConnection("{{BASE_URL}}")
-payload = 'email=me@vassily.pro'
-headers = {
-  'api-key': '{{API_KEY}}',
-  'Content-Type': 'application/x-www-form-urlencoded'
-}
-conn.request("POST", "/api/enterprise/v1/email", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-
-# Sample Python code - requests
+# Using requests
 import requests
 url = "{{BASE_URL}}/api/enterprise/v1/email"
 payload = 'email=me@vassily.pro'
@@ -97,6 +98,12 @@ headers = {
 response = requests.request("POST", url, headers=headers, data = payload)
 print(response.text.encode('utf8'))
 ```
+
+</details>
+
+<details>
+<summary>Ruby code example.</summary>
+<br>
 
 ```ruby
 require "uri"
@@ -114,20 +121,26 @@ response = http.request(request)
 puts response.read_body
 ```
 
-```swift
-// Sample Swift Code
-```
+</details>
 
 ### Request Parameters
+
+<details>
+<summary>Show the parameters.</summary>
+<br>
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
 | email | string | Email you want to add to the account for monitoring. |
 
-> Email address has been added to the account.
+</details>
 
-### Response: Email address succesfully added
+### Response Examples
+
+<details>
+<summary>Successfully registred an email address.</summary>
+<br>
 
 ```json
 {
@@ -136,7 +149,7 @@ puts response.read_body
     "id": "5e550fafaab5935e61ce6ddc",
     "emailAddress": "john.smith@example.com"
   }
-} 
+}
 ```
 
 | Name | Type | Description |
@@ -144,10 +157,11 @@ puts response.read_body
 | id | string | ID of the requested email address in the Breach Report database. |
 | emailAddress | string | The requested email address. |
 
+</details>
 
-> Same email cannot be added twice.
-
-### Response: Same email address cannot be added again
+<details>
+<summary>Cannot add a registered email address again.</summary>
+<br>
 
 ```json
 {
@@ -156,6 +170,8 @@ puts response.read_body
 }
 ```
 
+</details>
+
 
 ## Add a Domain Name
 
@@ -163,18 +179,35 @@ puts response.read_body
 
 **Request method:** `POST`
 
-This API request adds an internet domain to a Breach Report account. The target BR account is identified by the API key from the request header. 
+This API request adds an internet domain to a Breach Report account. The target BR account is identified by the API key from the request header.
 
 Some of the popular internet domains (gmail.com, facebook.com and such) are included in the API stop list and cannot be added.
 
-The request returns a response code and a status message. 
+The request returns a response code and a status message.
 
 How to construct the request:
 
 1. Include the API key in the request header.
 2. Specify the domain name in the request body.
 
+### Request Parameters
+
+<details>
+<summary>Show the parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | The API key (generated on the [Portal](https://breachreport.com/portal/user-api)). Must be included in the request header. |
+| domain | string | Domain to register. |
+
+</details>
+
 ### Code Examples
+
+<details>
+<summary>Shell code example.</summary>
+<br>
 
 ```shell
 curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/domain' \
@@ -183,56 +216,40 @@ curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/domain' \
 --data-urlencode 'domain=vassily.pro'
 ```
 
-```c
-// Sample C code
-```
+</details>
 
-```csharp
-// Sample C# code
-```
-
-
-```go
-// Sample Golang comments
-```
-
-```http
-<!-- Sample HTTP code --> 
-```
-
-
-```java
-// Sample Java code
-```
+<details>
+<summary>JavaScript code example.</summary>
+<br>
 
 ```javascript
-// Fetch
+// Using fetch()
+var myHeaders = new Headers();
+myHeaders.append("api-key", "{{API_KEY}}");
+myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+var urlencoded = new URLSearchParams();
+urlencoded.append("domain", "test.com");
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: urlencoded,
+  redirect: 'follow'
+};
+
+fetch("{{BASE_URL}}/api/enterprise/v1/domain", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 ```
 
-```javascript
-// NodeJS
-```
+</details>
 
-```php
-// Sample PHP code
-```
+<details>
+<summary>Python code example.</summary>
+<br>
 
 ```python
-# Sample Python code - http.client
-import http.client
-import mimetypes
-conn = http.client.HTTPSConnection("{{BASE_URL}}")
-payload = 'domain=vassily.pro'
-headers = {
-  'api-key': '{{API_KEY}}',
-  'Content-Type': 'application/x-www-form-urlencoded'
-}
-conn.request("POST", "/api/enterprise/v1/domain", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-
-# Sample Python code - requests
+# Using requests
 import requests
 url = "{{BASE_URL}}/api/enterprise/v1/domain"
 payload = 'domain=vassily.pro'
@@ -243,6 +260,12 @@ headers = {
 response = requests.request("POST", url, headers=headers, data = payload)
 print(response.text.encode('utf8'))
 ```
+
+</details>
+
+<details>
+<summary>Ruby code example.</summary>
+<br>
 
 ```ruby
 require "uri"
@@ -257,17 +280,11 @@ response = http.request(request)
 puts response.read_body
 ```
 
-```swift
-// Sample Swift Code
-```
+</details>
 
 
 ### Request parameters
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include the key in the request header. |
-| domain | string | Domain you want to add to the account for monitoring. |
 
 > Domain has been successfully added.
 
@@ -281,7 +298,7 @@ puts response.read_body
     "domainName": "smith-example.com"
   }
 }
- 
+
 ```
 
 | Name | Type | Description |
@@ -344,7 +361,7 @@ curl --location --request GET '{{BASE_URL}}/api/enterprise/v1/email' \
 ```
 
 ```http
-<!-- Sample HTTP code --> 
+<!-- Sample HTTP code -->
 ```
 
 
@@ -416,7 +433,7 @@ puts response.read_body
 
 > Email list has been returned.
 
-### Response: Email list 
+### Response: Email list
 
 ```json
 {
@@ -436,7 +453,7 @@ puts response.read_body
     }
   ]
 }
- 
+
 ```
 
 | Name | Type | Description |
@@ -480,7 +497,7 @@ curl --location --request GET '{{BASE_URL}}/api/enterprise/v1/domain' \
 ```
 
 ```http
-<!-- Sample HTTP code --> 
+<!-- Sample HTTP code -->
 ```
 
 
@@ -577,7 +594,7 @@ puts response.read_body
       "emailList": []
     }
   ]
-} 
+}
 ```
 
 | Name | Type | Description |
@@ -598,7 +615,7 @@ puts response.read_body
 
 The API request accepts a previously added email address's ID from the Breach Report database and removes the associated email address from the account.
 
-The request returns a response code and a status message. 
+The request returns a response code and a status message.
 
 How to construct the request:
 
@@ -625,7 +642,7 @@ curl --location --request DELETE '{{BASE_URL}}/api/enterprise/v1/email/5e4d65741
 ```
 
 ```http
-<!-- Sample HTTP code --> 
+<!-- Sample HTTP code -->
 ```
 
 
@@ -706,7 +723,7 @@ puts response.read_body
     "emailAddress": "john.smith@example.com"
   }
 }
- 
+
 ```
 
 | Name | Type | Description |
@@ -716,9 +733,9 @@ puts response.read_body
 | emailAddress | boolean | Email is verified the user: True/False. |
 
 
-> Cannot delete an email address that is not registered. 
+> Cannot delete an email address that is not registered.
 
-### Response: Cannot delete a missing email address 
+### Response: Cannot delete a missing email address
 
 ```json
 {
@@ -735,7 +752,7 @@ puts response.read_body
 
 The API request accepts a previously added domain's ID and removes the associated domain entry from the account.
 
-The request returns a response code and a status message. 
+The request returns a response code and a status message.
 
 How to construct the request:
 
@@ -763,7 +780,7 @@ curl --location --request DELETE '{{BASE_URL}}/api/enterprise/v1/domain/5e4d8233
 ```
 
 ```http
-<!-- Sample HTTP code --> 
+<!-- Sample HTTP code -->
 ```
 
 
@@ -842,7 +859,7 @@ puts response.read_body
     "emailAddress": "john.smith@example.com"
   }
 }
- 
+
 ```
 
 | Name | Type | Description |
@@ -863,13 +880,13 @@ puts response.read_body
 }
 ```
 
-## Check a Registered Email Address for Breaches
+## Check a Registered Email Address
 
 **Request URL**: `{BASE_URL}/api/enterprise/v1/email/{EMAIL_ID}/check`
 
 **Request method:** `GET`
 
-The request accepts the email address ID and returns information on related data breaches. 
+The request accepts the email address ID and returns information on related data breaches.
 
 Alternatively, you may check any email address (previously added or a new one) using a [hashed email address value](#check-a-hashed-email-address) (recommended method) or a [plaintext value](#check-a-plaintext-email-address).
 
@@ -906,7 +923,7 @@ curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/email/check' \
 ```
 
 ```http
-<!-- Sample HTTP code --> 
+<!-- Sample HTTP code -->
 ```
 
 
@@ -1019,7 +1036,7 @@ puts response.read_body
     }
   ]
 }
- 
+
 ```
 
 | Name | Type | Description |
@@ -1078,7 +1095,7 @@ puts response.read_body
 
 **Request method:** `GET`
 
-This API call accepts an API key and a domain ID, and returns information on previous data breaches for the domain. 
+This API call accepts an API key and a domain ID, and returns information on previous data breaches for the domain.
 
 Alternatively, you may check an email address by the [hashed email address](#hashed-email-check) (recommended method).
 
@@ -1108,7 +1125,7 @@ curl --location --request GET '{{BASE_URL}}/api/enterprise/v1/domain/{{DOMAIN_ID
 ```
 
 ```http
-<!-- Sample HTTP code --> 
+<!-- Sample HTTP code -->
 ```
 
 
@@ -1235,7 +1252,7 @@ puts response.read_body
 
 ### Response: Cannot find a domain with this ID
 
-The domain hasn't been added to the API key owner's account. Probably, an incorrect Domain ID. 
+The domain hasn't been added to the API key owner's account. Probably, an incorrect Domain ID.
 
 ```json
 {
@@ -1243,11 +1260,3 @@ The domain hasn't been added to the API key owner's account. Probably, an incorr
   "message": "Domain does not exist"
 }
 ```
-
-
-# Monitoring Email Addresses and Web Domains
-
-Breach Report API enables the consumers to put email addresses and web domains on and off the watchlist. 
-
-The consumers will be alerted via the [Postback URL](#configuring-postback-url-address), if the associated addresses and domains on the watchlist are subject to new data breach incidents. 
-

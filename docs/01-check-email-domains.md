@@ -29,8 +29,8 @@ Alternatively, you may check an email address by using a [hashed email address](
 
 This API call returns:
 
-* Incidents count for **unverified** emails.
-* Incidents count and details for **verified** emails.
+* Incident count for **unverified** emails.
+* Incident count and **details** for **verified** emails.
 
 Verified email addresses are those that are confirmed by the API users via their email addresses. 
 
