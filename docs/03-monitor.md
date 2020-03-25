@@ -4,6 +4,11 @@ Breach Report API enables the consumers to put email addresses and web domains o
 
 The consumers will be alerted via the [Postback URL](), if the associated addresses and domains on the watchlist are subject to new data breach incidents. 
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 
 ## Start Email Monitoring
 
@@ -154,6 +159,11 @@ puts response.read_body
 }
 ```
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 
 ## Start Domain Monitoring
 
@@ -178,55 +188,13 @@ curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/domain/5e4d82332d
 --header 'api-key: {{API_KEY}}'
 ```
 
-<!-- ```c
-// Sample C code
-```
-
-```csharp
-// Sample C# code
-```
-
-
-```go
-// Sample Golang comments
-```
-
-```http
-Sample HTtp
-```
-
-
-```java
-// Sample Java code
-```
 
 ```javascript
 // Fetch
 ```
 
-```javascript
-// NodeJS
-```
-
-```php
-// Sample PHP code
-``` -->
-
 ```python
-# Sample Python code - http.client
-import http.client
-import mimetypes
-conn = http.client.HTTPSConnection("{{BASE_URL}}")
-payload = ''
-headers = {
-  'api-key': '{{API_KEY}}'
-}
-conn.request("POST", "/api/enterprise/v1/domain/5e4d82332d313f32626f8481/monitoring", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-
-# Sample Python code - requests
+# Using requests
 import requests
 url = "{{BASE_URL}}/api/enterprise/v1/domain/5e4d82332d313f32626f8481/monitoring"
 payload = {}
@@ -248,9 +216,6 @@ response = http.request(request)
 puts response.read_body 
 ```
 
-```swift
-// Sample Swift Code
-```
 
 
 ### Request Parameters
@@ -303,6 +268,10 @@ After using the Domain ID that doesn't exist:
   "message": "Domain was not found. Please, add email and send request again."
 }
 ```
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 
 
 ## Stop Email Monitoring
@@ -458,6 +427,11 @@ The example to the right shows the response when the requester attempts to remov
 }
 ```
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 
 ## Stop Domain Monitoring
 
@@ -602,6 +576,12 @@ puts response.read_body
   "message": "Domain was not found. Please, add domain and send request again."
 }
 ```
+
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 
 ## Assign an Email Address
 
@@ -787,3 +767,8 @@ The target domain doesn't match the email address domain.
   "message": "Domain doesn't exist"
 }
 ```
+
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>

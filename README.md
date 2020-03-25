@@ -46,28 +46,41 @@ The following parameters can be specified via the test environment.
 ## How to Use SuperAPI
 
 * [Check Email Addresses and Domains]()
-
-
+* [Register Email Addresses and Domains]()
+* [Monitor Email Addresses and Domains]()
+* [Configure the Postback URL and Be Updated]()
 
 
 ## Contact 
 
+If you need help integrating with Breach Report API or need additional information, don't hesitate to contact us on:
+
+* Telegram
+* Stackoverflow
+* Twitter
+
+Or email us at info@breachreport.com.
+If you want to report a security issue, include the word "security" in the subject field.
+
+We take security issues very seriously and we'll be looking forward to hearing from you. Still, we hope you enjoy using KeyChain and the integration goes smooth!
+
 ## License 
 
-## Dropdown Example
 
-<details>
-<summary>Show a Python code example</summary>
-<br>
 
-```python
-usage = """Usage: python shortener.py [url]
-e.g python shortener.py http://www.google.com"""
-if len(sys.argv) != 2:
-    print usage
-    sys.exit(0)
-longurl = sys.argv[1]
-response = b.shorten(longUrl=longurl)
-```
-</details>
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
+## Response Codes
+
+| Code | Name | Description |
+| ------ | ------ | ------ |
+| 200 | OK | Request successfully passed. |
+| 400 | Bad Request | Invalid domain URL. Please check the Base URL value. |
+| 401 | Unauthorized | The `API-Key` value is invalid or is missing from the header. Make sure that you have generated one at [Portal](https://breachreport.com/portal/user-api) section. |
+| 402 | Payment required | You may need to upgrade your subscription. For further information, visit the [Subscription](https://breachreport.com/portal/subscriptions) page. |
+| 409 | Conflict | The domain name or the email address was registered before. Check your account for existing domains / emails. |
+| 500 | Internal server error | Internal server error occured. If this issue persists, contact our Support Service. |

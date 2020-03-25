@@ -12,6 +12,10 @@ You can manage the Postback URL value using the following operations:
 * [Set or update the Postback URL Address](#set-postback-url-address)
 * [Remove the Postback URL Address altogether](#delete-postback-url-address)
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 
 ## Notification Data Example
 
@@ -68,6 +72,11 @@ You can manage the Postback URL value using the following operations:
 }
 ```
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 
 ## Get Postback URL Address
 
@@ -84,6 +93,13 @@ How to construct the request:
 1. Include the API key in the request header.
 2. Specify your hashed email in the request body.
 
+### Request Parameters
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
+| email | string | Email you want to check. |
+
 ### Code Examples
 
 ```shell
@@ -91,26 +107,7 @@ curl --location --request GET '{{BASE_URL}}/api/enterprise/v1/postback' \
 --header 'api-key: {{API_KEY}}'
 ```
 
-<!-- ```c
-// Sample C code
-```
 
-```csharp
-// Sample C# code
-```
-
-
-```go
-// Sample Golang comments
-```
-
-```http
-<!-- Sample HTTP code --> 
-```
-
-```java
-// Sample Java code
-```
 
 ```javascript
 // Fetch
@@ -163,17 +160,9 @@ response = http.request(request)
 puts response.read_body
 ```
 
-```swift
-// Sample Swift Code
-```
 
 
-### Request Parameters
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
-| email | string | Email you want to check. |
 
 > Current Postback URL value
 
@@ -229,27 +218,6 @@ curl --location --request POST '{{BASE_URL}}/api/enterprise/v1/postback' \
 --header 'api-key: {{API_KEY}}' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'url=http://localhost:3080/admin/user/test-webhook-url'
-```
-
-```c
-// Sample C code
-```
-
-```csharp
-// Sample C# code
-```
-
-```go
-// Sample Golang comments
-```
-
-```http
-<!-- Sample HTTP code --> 
-```
-
-
-```java
-// Sample Java code
 ```
 
 ```javascript
@@ -345,6 +313,10 @@ puts response.read_body
 }
 ```
 
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 
 ## Delete Postback URL Address
 
