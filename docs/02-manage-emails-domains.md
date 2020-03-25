@@ -282,13 +282,11 @@ puts response.read_body
 
 </details>
 
+### Response Examples
 
-### Request parameters
-
-
-> Domain has been successfully added.
-
-### Response: Domain successfully added
+<details>
+<summary>Added the domain successfully.</summary>
+<br>
 
 ```json
 {
@@ -306,10 +304,11 @@ puts response.read_body
 | id | string | Identifier of the domain. |
 | domainName | string | The domain name. |
 
+</details>
 
-> Cannot add the same domain again.
-
-### Response: Same domain cannot be added again
+<details>
+<summary>Cannot register the same domain multiple times.</summary>
+<br>
 
 ```json
 {
@@ -318,9 +317,11 @@ puts response.read_body
 }
 ```
 
-> Domain is in the stop list, cannot be added again.
+</details>
 
-### Domain is in the stop list
+<details>
+<summary>Cannot register a domain that's on the stop list.</summary>
+<br>
 
 ```json
 {
@@ -329,6 +330,7 @@ puts response.read_body
 }
 ```
 
+</details>
 
 ## Get the Email List
 
@@ -340,62 +342,59 @@ This call returns the list of email addresses attributed to the API key owner's 
 
 To construct the request, include the API key in the request header.
 
+### Request Parameters
+
+<details>
+<summary>Show the parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
+
+</details>
+
 ### Code Examples
+
+<details>
+<summary>Shell command example.</summary>
+<br>
 
 ```shell
 curl --location --request GET '{{BASE_URL}}/api/enterprise/v1/email' \
 --header 'api-key: {{API_KEY}}'
 ```
 
-```c
-// Sample C code
-```
+</details>
 
-```csharp
-// Sample C# code
-```
-
-
-```go
-// Sample Golang comments
-```
-
-```http
-<!-- Sample HTTP code -->
-```
-
-
-```java
-// Sample Java code
-```
+<details>
+<summary>JavaScript code example.</summary>
+<br>
 
 ```javascript
-// Fetch
+// Using fetch()
+var myHeaders = new Headers();
+myHeaders.append("api-key", "{{API_KEY}}");
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("{{BASE_URL}}/api/enterprise/v1/email", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 ```
 
-```javascript
-// NodeJS
-```
+</details>
 
-```php
-// Sample PHP code
-```
+<details>
+<summary>Python code example.</summary>
+<br>
 
 ```python
-# Sample Python code - http.client
-import http.client
-import mimetypes
-conn = http.client.HTTPSConnection("{{BASE_URL}}")
-payload = ''
-headers = {
-  'api-key': '{{API_KEY}}'
-}
-conn.request("GET", "/api/enterprise/v1/email", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-
-# Sample Python code - requests
+# Using requests
 import requests
 url = "{{BASE_URL}}/api/enterprise/v1/email"
 payload = {}
@@ -406,34 +405,30 @@ response = requests.request("GET", url, headers=headers, data = payload)
 print(response.text.encode('utf8'))
 ```
 
+</details>
+
+<details>
+<summary>Ruby code example.</summary>
+<br>
+
 ```ruby
 require "uri"
 require "net/http"
-
 url = URI("{{BASE_URL}}/api/enterprise/v1/email")
-
 http = Net::HTTP.new(url.host, url.port);
 request = Net::HTTP::Get.new(url)
 request["api-key"] = "{{API_KEY}}"
-
 response = http.request(request)
 puts response.read_body
 ```
 
-```swift
-// Sample Swift Code
-```
+</details>
 
+### Response Examples
 
-### Request Parameters
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
-
-> Email list has been returned.
-
-### Response: Email list
+<details>
+<summary>Returned the email list.</summary>
+<br>
 
 ```json
 {
@@ -465,6 +460,13 @@ puts response.read_body
 | inWatchlist | boolean | This logical value shows whether the email address is currently being monitored (`true` or `false`). |
 | isAssignToDomain | boolean | This value shows whether the email address is currently assigned to a domain. |
 
+</details>
+
+<details>
+<summary>Sample response example.</summary>
+<br>
+
+</details>
 
 ## Get the Domain List
 
@@ -476,62 +478,60 @@ This call returns the list of web domains attributed to the API key owner's acco
 
 To construct the request, include the API key in the request header.
 
+### Request Parameters
+
+<details>
+<summary>Show the parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Must be included in the request header. |
+
+</details>
+
 ### Code Examples
+
+<details>
+<summary>Shell command example.</summary>
+<br>
 
 ```shell
 curl --location --request GET '{{BASE_URL}}/api/enterprise/v1/domain' \
 --header 'api-key: {{API_KEY}}'
 ```
 
-```c
-// Sample C code
-```
+</details>
 
-```csharp
-// Sample C# code
-```
-
-
-```go
-// Sample Golang comments
-```
-
-```http
-<!-- Sample HTTP code -->
-```
-
-
-```java
-// Sample Java code
-```
+<details>
+<summary>JavaScript code example.</summary>
+<br>
 
 ```javascript
-// Fetch
+// Using fetch()
+var myHeaders = new Headers();
+myHeaders.append("api-key", "{{API_KEY}}");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("{{BASE_URL}}/api/enterprise/v1/email", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 ```
 
-```javascript
-// NodeJS
-```
+</details>
 
-```php
-// Sample PHP code
-```
+<details>
+<summary>Python code example.</summary>
+<br>
 
 ```python
-# Sample Python code - http.client
-import http.client
-import mimetypes
-conn = http.client.HTTPSConnection("{{BASE_URL}}")
-payload = ''
-headers = {
-  'api-key': '{{API_KEY}}'
-}
-conn.request("GET", "/api/enterprise/v1/domain", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-
-# Sample Python code - requests
+# Using requests
 
 Public
 import requests
@@ -543,6 +543,12 @@ headers = {
 response = requests.request("GET", url, headers=headers, data = payload)
 print(response.text.encode('utf8'))
 ```
+
+</details>
+
+<details>
+<summary>Ruby code example.</summary>
+<br>
 
 ```ruby
 require "uri"
@@ -558,19 +564,13 @@ response = http.request(request)
 puts response.read_body
 ```
 
-```swift
-// Sample Swift Code
-```
+</details>
 
-### Request parameters
+### Response Examples
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
-
-> BR API returned the domain list.
-
-### Response: Domain list
+<details>
+<summary>Sample response example.</summary>
+<br>
 
 ```json
 {
@@ -606,6 +606,7 @@ puts response.read_body
 | inWatchlist | boolean | Indicates whether the domain is in the watchlist (in other words, is currently monitored). |
 | emailList | nested object | Related email addresses, if any. |
 
+</details>
 
 ## Delete an Email Address
 
