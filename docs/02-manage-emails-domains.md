@@ -1,3 +1,8 @@
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
+
 # Working with the Account
 
 Most Breach Report API calls are only applicable to the email addresses and web domains that have been registered with the consumer's account.
@@ -12,6 +17,11 @@ This chapter describes the following API calls:
 * [Remove a web domain from the account](#delete-a-domain)
 * [Check a registered email address for data breach incidents](#check-a-registered-email-address)
 * [Check a registered web domain for data breach incidents](#check-a-registered-domain)
+
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 
 ## Add an Email Address
 
@@ -171,6 +181,11 @@ puts response.read_body
 ```
 
 </details>
+
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>
 
 
 ## Add a Domain Name
@@ -569,7 +584,7 @@ puts response.read_body
 ### Response Examples
 
 <details>
-<summary>Sample response example.</summary>
+<summary>Returned a domain list.</summary>
 <br>
 
 ```json

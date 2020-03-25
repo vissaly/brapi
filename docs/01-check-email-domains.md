@@ -1,6 +1,6 @@
 <p align="center">
   <br>
-  <img width="500" src="./img/chapter-separate.jpg" alt="">
+  <img width="500" src="../img/chapter-separate.jpg" alt="">
 </p>
 
 # Checking Domains and Email Addresses</span>
@@ -14,7 +14,7 @@ SuperAPI enables the user to check email addresses for data breach incidents by 
 
 <p align="center">
   <br>
-  <img width="500" src="./img/chapter-separate.jpg" alt="">
+  <img width="500" src="../img/chapter-separate.jpg" alt="">
 </p>
 
 # Check a Plaintext Email Address
