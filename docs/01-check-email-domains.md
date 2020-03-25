@@ -25,6 +25,17 @@ Breach Report API enables the user to check email addresses for data breach inci
 
 This API call accepts a plaintext email address and checks it for known data breaches. 
 
+<details>
+<summary>Show the request parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). The API key must be included in the request header. |
+| email | string | Email address to be checked. |
+
+</details>
+
 Alternatively, you may check an email address by using a [hashed email address](#check-a-hashed-email-address) (recommended method).
 
 This API call returns:
@@ -90,14 +101,6 @@ puts response.read_body
 ```
 
 </details>
-
-### Request Parameters
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). The API key must be included in the request header. |
-| email | string | Email address to be checked. |
-
 
 ### Response Examples 
 
@@ -190,6 +193,17 @@ puts response.read_body
 
 This API call accepts a SHA256-hash email address value. This is the recommended way to check email addresses using Breach Report API.
 
+<details>
+<summary>Show the request parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
+| hash | string | Hashed email address you want to check. |
+
+</details>
+
 Alternatively, the API provides a request accepting [a plaintext email address value](#check-a-plaintext-email-address). 
 
 This API call returns:
@@ -268,14 +282,6 @@ puts response.read_body
 ```
 </details>
 
-### Request Parameters
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). Include this key in the request header. |
-| hash | string | Hashed email address you want to check. |
-
-
 ### Response examples
 
 <details>
@@ -324,7 +330,6 @@ puts response.read_body
 | breachDataTypes| [string] | The list of leaked data types within the incident. |
 </details>
 
-
 <details>
 <summary>Unverified Email Address - Found Breaches</summary>
 <br>
@@ -357,7 +362,18 @@ puts response.read_body
 
 **Request method:** `POST`
 
-This API call accepts a plaintext web domain and returns a list of compromised email addresses on this domain. 
+This API call accepts a plaintext web domain value and returns a list of compromised email addresses on this domain. 
+
+<details>
+<summary>Show the request parameters.</summary>
+<br>
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). The API key must be included in the request header. |
+| domain | string | Web domain to be checked. |
+
+</details>
 
 How to construct the request:
 
@@ -416,16 +432,7 @@ puts response.read_body
 ```
 </details>
 
-
-### Request Parameters
-
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| api-key | string | An API key you can generate on the [Portal](https://breachreport.com/portal/user-api). The API key must be included in the request header. |
-| domain | string | Web domain to be checked. |
-
 ### Response Examples
-
 
 <details>
 <summary>Found Compromised Email Addresses on this Domain</summary>
