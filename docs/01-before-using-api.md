@@ -41,17 +41,12 @@ The page now displays the API key you've generated.
 3. Enter the email address in the **Add Email** field.
 4. Confirm the operation by pressing Enter or by clicking [+] button. 
 
-<p align="center">
-  <img width="200" src="./img/verify-email-01.png" alt="">
-  <br>
-</p>
+
 
 
 ## Verifying a Registered Email Address
 
 <p align="center">
-  <br>
-  <img width="200" src="./img/verify-email-01.png" alt="">
-  <br>
+  <img width="500" src="https://github.com/vissaly/brapi/blob/master/img/verify-email-01.png" alt="">
   <br>
 </p>
