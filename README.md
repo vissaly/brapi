@@ -1,6 +1,6 @@
 <p align="center">
   <br>
-  <img width="200" src="./img/logo.png" alt="">
+  <img width="200" src="./img/breachreport-200px.png" alt="">
   <br>
   <br>
 </p>
@@ -66,8 +66,7 @@ We take security issues very seriously and we'll be looking forward to hearing f
 
 ## License 
 
-
-
+This project is licensed under the terms of the MIT license.
 
 <p align="center">
   <br>

@@ -440,6 +440,7 @@ request.body = "domain=example.com"
 response = http.request(request)
 puts response.read_body
 ```
+
 </details>
 
 ### Response Examples
@@ -464,21 +465,23 @@ puts response.read_body
 
 </details>
 
-
 <details>
 <summary>Found No Compromised Email Addresses on this Domain</summary>
 <br>
 
 ```json
 {
-    "email": "test@example.com",
-    "records": 34924,
-    "isAssigned": false,
-    "breaches": []
+    "emails": []
 }
 ```
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | domains | [] | Empty list of compromised email addresses. |
+
 </details>
+
+<p align="center">
+  <br>
+  <img width="500" src="./img/chapter-separate.jpg" alt="">
+</p>

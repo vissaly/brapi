@@ -1,3 +1,5 @@
+# Before Using Breach Report API
+
 ## Registering and Getting the API Key
 
 Your application will authenticate all calls to SuperAPI using the unique API key. To get the API key, you'll need to register at SuperAPI site. 
