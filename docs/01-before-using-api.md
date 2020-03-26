@@ -11,6 +11,7 @@ Things you must know before using Breach Report API:
 * Registering at Breach Report 
 * Getting the API key
 * Adding an email address
+* Verifying an email address
 
 
 ## Registering at Breach Report Portal
@@ -36,17 +37,35 @@ The page now displays the API key you've generated.
 
 ## Adding an Email Address
 
+Registering at Breach Report portal automatically adds the registration email address to your account. 
+
+You can add more email addresses to your account via the portal or bu using 
+
+To add an email address via the portal:
+
 1. Login in on the [Breach Report portal](https://superapi.com/portal/). 
 2. Open the Email Accounts section. 
 3. Enter the email address in the **Add Email** field.
-4. Confirm the operation by pressing Enter or by clicking [+] button. 
+4. Confirm the operation by pressing Enter or by clicking the [+] button. 
 
+<p align="center">
+  <img width="500" src="https://github.com/vissaly/brapi/blob/master/img/add-email-01.png" alt="">
+  <br>
+</p>
 
+Alternatively, the address can be registered via the API.
 
 
 ## Verifying a Registered Email Address
+
+Adding an email address to the account (via the portal or by email) automatically sends a confirmation request to the specified email address. 
+
+When adding an email address via the portal, a message appears in the bottom portion of the page. 
 
 <p align="center">
   <img width="500" src="https://github.com/vissaly/brapi/blob/master/img/verify-email-01.png" alt="">
   <br>
 </p>
+
+To verify an email address, open the confirmation request message and verify it by clicking the confirmation link. 
+
